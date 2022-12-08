@@ -1,0 +1,58 @@
+# Bert Case
+#  输入 
+#     INPUT0:INT32 
+#     INPUT1:INT32 
+#     INPUT2:INT32
+#  输出
+#     OUTPUT0:FP32
+#     OUTPUT1:FP32
+# instance_group含义 在哪种DEVICE上执行推理
+# BATCH_SIZE:16
+
+max_batch_size: 128
+name: "bert_case"
+backend: "python"
+dynamic_batching { }
+
+input [
+  {
+    name: "INPUT0"
+    data_type: TYPE_INT32
+    dims: [ 128 ]
+  }
+]
+input [
+  {
+    name: "INPUT1"
+    data_type: TYPE_INT32
+    dims: [ 128 ]
+  }
+]
+input [
+  {
+    name: "INPUT2"
+    data_type: TYPE_INT32
+    dims: [ 128 ]
+  }
+]
+output [
+  {
+    name: "OUTPUT0"
+    data_type: TYPE_FP32
+    dims: [ 2 ]
+  }
+]
+output [
+  {
+    name: "OUTPUT1"
+    data_type: TYPE_FP32
+    dims: [ 2 ]
+  }
+]
+
+instance_group [{ kind: KIND_CPU }]
+
+parameters: {
+  key: "EXECUTION_ENV_PATH",
+  value: {string_value: "/opt/tritonserver/python37_mm0.13.0.tar.gz"}
+}
