@@ -49,7 +49,6 @@ ldd triton_python_backend_stub
 
 cp triton_python_backend_stub  /opt/tritonserver/triton_prj/bert/triton_codes/mm_models/yolov5n
 
-
 cd ../../
 conda install conda-pack -y
 conda-pack

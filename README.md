@@ -1,13 +1,16 @@
 # Triton Python Backend  + Python MagicMind
 ## 获取代码
-- git clone  http://gitlab.software.cambricon.com/xiaoqi/triton_prj.git
+- git clone  https://github.com/xiaoqi25478/triton_python_backend_with_magicmind.git
 
 ## 功能说明
-- 通过Triton+MagicMind的方式实现Bert_Case、YOLOv5n、Resnet50_vd三个模型的推理服务化
+- NVIDIA Triton推理服务是NVIDIA推出的开源推理框架，主要为用户提供在云和边缘推理上部署的解决方案,支持多种不同的后端，如Tensorflow,Pytorch,TensorTRT，Python等等。
+- MagicMind 是面向寒武纪 MLU 的推理加速引擎,MagicMind 能将 AI 框架(Tensorflow,PyTorch,ONNX,Caffe 等) 训练好的算法模型转换成 MagicMind 统一计算图表示,并提供端到端的模型优化、代码生成以及推理业务部署能力。
+- 通过Triton Python Backend+MagicMind Python版本的方式实现Bert_Case、YOLOv5n、Resnet50_vd三个模型的推理服务化
+
 
 ## 环境介绍
 - Device:MLU370 X8
-- MagicMin版本 0.13.0
+- MagicMin版本 0.14.0
 - Python:3.7
 
 ## 模型部署
@@ -94,7 +97,6 @@ bash start_triton_client_pref.sh
 
 **SEQ_LEN 128**
 
-[MagicMind数据来自这里](https://wiki.cambricon.com/display/YYYSTB/Bert)
 *MagicMind数据device:x8和mm版本0.14*
 
 ### Bert Case 
@@ -123,7 +125,6 @@ bash start_triton_client_pref.sh
 ### YOLOv5n
 **mm_build设置bs维度为可变**
 
-[MagicMind数据来自这里](https://wiki.cambricon.com/pages/viewpage.action?pageId=172034351)
 *MagicMind数据device:x8和mm版本0.14*
 
 **640*640**
@@ -163,7 +164,6 @@ bash start_triton_client_pref.sh
 **mm_build设置bs维度为可变**
 **Renet50模型来源自paddlepaddle**
 
-[MagicMind数据来自这里](https://wiki.cambricon.com/display/YYYSTB/Resnet50)
 *MagicMind数据device:x8和mm版本0.14*
 
 **224*224**
