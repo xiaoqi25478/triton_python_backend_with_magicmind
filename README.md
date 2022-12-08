@@ -5,12 +5,12 @@
 ## 功能说明
 - NVIDIA Triton推理服务是NVIDIA推出的开源推理框架，主要为用户提供在云和边缘推理上部署的解决方案,支持多种不同的后端，如Tensorflow,Pytorch,TensorTRT，Python等等。
 - MagicMind 是面向寒武纪 MLU 的推理加速引擎,MagicMind 能将 AI 框架(Tensorflow,PyTorch,ONNX,Caffe 等) 训练好的算法模型转换成 MagicMind 统一计算图表示,并提供端到端的模型优化、代码生成以及推理业务部署能力。
-- 通过Triton Python Backend+MagicMind Python版本的方式实现Bert_Case、YOLOv5n、Resnet50_vd三个模型的推理服务化
+- 通过Triton Python Backend+MagicMind Python版本的方式实现Bert_Case、YOLOv5n、resnet50_vd三个模型的推理服务化
 
 
 ## 环境介绍
 - Device:MLU370 X8
-- MagicMin版本 0.14.0
+- MagicMind版本 0.14.0
 - Python:3.7
 
 ## 模型部署
@@ -160,7 +160,7 @@ bash start_triton_client_pref.sh
 | FP32 |  MLU370 X8 | 32  | 128916 usec | 129968 usec | 271.975 infer/sec |925.9| 29.944|
 | FP32 |  MLU370 X8 | 64  | 225119 usec | 231401 usec | 287.974 infer/sec |2154.6 | 59.293 |
 
-### Resnet50
+### resnet50_vd
 **mm_build设置bs维度为可变**
 **Renet50模型来源自paddlepaddle**
 
