@@ -1,6 +1,7 @@
 # Triton Python Backend  + Python MagicMind
 ## 获取代码
 - git clone  https://github.com/xiaoqi25478/triton_python_backend_with_magicmind.git
+- 论坛帖子:https://forum.cambricon.com/index.php?m=content&c=index&a=show&catid=176&id=2241
 
 ## 功能说明
 - NVIDIA Triton推理服务是NVIDIA推出的开源推理框架，主要为用户提供在云和边缘推理上部署的解决方案,支持多种不同的后端，如Tensorflow,Pytorch,TensorTRT，Python等等。
